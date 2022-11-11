@@ -31,26 +31,44 @@ The RBF of hidden neuron as gaussian function
 
 
 ## ALGORIHM:
-1.Import the necessary libraries of python.
+1.import the necessary libraries of python.
+
 2.In the end_to_end function, first calculate the similarity between the inputs and the peaks.
+
 3.Then, to find w used the equation Aw= Y in matrix form.
+
 4.Each row of A (shape: (4, 2)) consists of
+
 5.index[0]: similarity of point with peak1
+
 6.index[1]: similarity of point with peak2
+
 7.index[2]: Bias input (1)
+
 8.Y: Output associated with the input (shape: (4, ))
+
 9.W is calculated using the same equation we use to solve linear regression using a closed solution (normal equation).
+
 10.This part is the same as using a neural network architecture of 2-2-1,
+
 11.2 node input (x1, x2) (input layer)
+
 12.2 node (each for one peak) (hidden layer)
+
 13.1 node output (output layer)
+
 14.To find the weights for the edges to the 1-output unit. Weights associated would be:
+
 15.edge joining 1st node (peak1 output) to the output node
+
 16.edge joining 2nd node (peak2 output) to the output node.
+
 ### Developed by:Palamakula deepika
+
 ### reg no : 21221240035
 
 ## PROGRAM:
+~~~
 import numpy as np
 import matplotlib.pyplot as plt
 import tensorflow as tf
@@ -130,10 +148,10 @@ print(f"Input:{np.array([0, 0])}, Predicted: {predict_matrix(np.array([0, 0]), w
 print(f"Input:{np.array([0, 1])}, Predicted: {predict_matrix(np.array([0, 1]), w)}")
 print(f"Input:{np.array([1, 0])}, Predicted: {predict_matrix(np.array([1, 0]), w)}")
 print(f"Input:{np.array([1, 1])}, Predicted: {predict_matrix(np.array([1, 1]), w)}")
+~~~~
+![N 1](https://user-images.githubusercontent.com/94154679/201339906-583abc43-c10e-4ea1-8400-b70cbb634dae.jpg)
 
-![1](https://user-images.githubusercontent.com/94154679/201338690-2cf7441d-f285-4aad-b5f8-c8d044d0f6d5.jpg)
-![2](https://user-images.githubusercontent.com/94154679/201338713-0af09ce2-2379-4b96-8bc9-d380e21ca225.jpg)
-
+~~~~
 mu1 = np.array([0, 0])
 mu2 = np.array([1, 1])
 
@@ -145,9 +163,8 @@ print(f"Input:{np.array([0, 0])}, Predicted: {predict_matrix(np.array([0, 0]), w
 print(f"Input:{np.array([0, 1])}, Predicted: {predict_matrix(np.array([0, 1]), w)}")
 print(f"Input:{np.array([1, 0])}, Predicted: {predict_matrix(np.array([1, 0]), w)}")
 print(f"Input:{np.array([1, 1])}, Predicted: {predict_matrix(np.array([1, 1]), w)}")
-
-![3](https://user-images.githubusercontent.com/94154679/201338965-0ecdfb09-84c3-439f-a1ba-e908ac8d1c9d.jpg)
-![4](https://user-images.githubusercontent.com/94154679/201339040-93df2617-d084-406d-b5fc-79d612cb45b9.jpg)
+~~~~
+![N 2](https://user-images.githubusercontent.com/94154679/201340143-c8f5e8a5-6483-43cc-ad85-dbea9a7ef5a9.jpg)
 
 ## RESULT:
 Thus Implementation of XOR problem using Radial Basis Function executed successfully.
